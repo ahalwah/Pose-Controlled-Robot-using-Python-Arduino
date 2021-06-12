@@ -1,12 +1,12 @@
 #include <SoftwareSerial.h>
 //UART TO HM10 Module
-const int bluRX_ardTXpin = 3;
-const int bluTX_ardRXpin = 2;
+const int bluRX_ardTXpin = 2;
+const int bluTX_ardRXpin = 3;
 SoftwareSerial bluetooth(bluTX_ardRXpin, bluRX_ardTXpin);
 String x;
 
 void setup() {
- bluetooth.begin(9600);
+ bluetooth.begin(38400);
  Serial.begin(9600);
  Serial.setTimeout(1);
  pinMode(led,OUTPUT);
